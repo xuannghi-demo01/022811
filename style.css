@@ -1,0 +1,767 @@
+body{
+
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ffd6e8,#fff7fb);
+    overflow-x:hidden;
+
+}
+
+.container{
+
+    width:500px;
+    margin:70px auto;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 0 25px rgba(0,0,0,.2);
+    text-align:center;
+
+}
+
+h1{
+
+    color:#ff4d94;
+    font-size:52px;
+    margin-bottom:20px;
+    white-space: nowrap;
+
+}
+
+.subtitle{
+
+    font-size:24px;
+    margin-bottom:35px;
+
+}
+
+/* ================= HỘP QUÀ ================= */
+
+#giftBox{
+
+    font-size:120px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+#giftBox{
+
+    display:inline-block;
+
+    cursor:pointer;
+
+}
+
+#lid{
+
+    font-size:90px;
+
+    transition:.6s;
+
+}
+
+#box{
+
+    font-size:90px;
+
+    margin-top:-35px;
+
+}
+
+.open #lid{
+
+    transform:
+        translateY(-35px)
+        rotate(-25deg);
+
+}
+
+.shake{
+    animation:shake .5s;
+}
+
+@keyframes shake{
+    0%{transform:rotate(0deg);}
+    20%{transform:rotate(-10deg);}
+    40%{transform:rotate(10deg);}
+    60%{transform:rotate(-10deg);}
+    80%{transform:rotate(10deg);}
+    100%{transform:rotate(0deg);}
+}
+
+#giftBox:hover{
+
+    transform:scale(1.1);
+
+}
+
+#guide{
+
+    font-size:20px;
+
+}
+
+/* ================= MÈO ================= */
+
+#gift{
+
+    display:none;
+    animation:fadeIn .8s;
+
+}
+
+#catGift{
+
+    width:220px;
+    height:auto;
+    display:block;
+    margin:20px auto;
+    animation:float 2s ease-in-out infinite;
+
+}
+
+#gift h2{
+
+    color:#ff4d94;
+    font-size:34px;
+
+}
+
+#letterBtn{
+
+    background:#ff66a3;
+    color:white;
+    border:none;
+    border-radius:35px;
+    padding:15px 35px;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+#letterBtn:hover{
+
+    background:#ff3d8a;
+    transform:scale(1.05);
+
+}
+
+/* ================= LÁ THƯ ================= */
+
+#letter{
+
+    display:none;
+
+    font-size:120px;
+
+    cursor:pointer;
+
+    animation:float 2s infinite;
+
+}
+
+#letterGuide{
+
+    display:none;
+
+    color:#ff4d94;
+
+    font-size:20px;
+
+}
+
+/* ================= LỜI CHÚC ================= */
+
+#message{
+
+    display:none;
+
+    margin-top:35px;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#444;
+
+}
+
+/* ================= TIM ================= */
+
+.heart{
+
+    position:fixed;
+
+    left:0;
+
+    bottom:-50px;
+
+    font-size:30px;
+
+    animation:fly 4s linear forwards;
+
+    pointer-events:none;
+
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes fly{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ================= ĐIỆN THOẠI ================= */
+.pop{
+
+    animation:pop .6s;
+
+}
+
+@keyframes pop{
+    0%{
+        opacity:0;
+        transform:translateY(60px) scale(.5);
+    }
+
+    70%{
+        opacity:1;
+        transform:translateY(-15px) scale(1.1);
+    }
+
+    100%{
+        transform:translateY(0) scale(1);
+    }
+}
+@media(max-width:768px){
+
+    .container{
+
+        width:90%;
+        padding:25px;
+        margin:35px auto;
+
+    }
+
+    h1{
+        font-size:32px;
+        white-space:nowrap;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:5px;
+    }
+
+    .subtitle{
+
+        font-size:18px;
+
+    }
+
+    #giftBox{
+
+        font-size:90px;
+
+    }
+
+    #cat{
+
+        width:180px;
+
+    }
+
+    #letter{
+
+        font-size:90px;
+
+    }
+
+    #letterBtn{
+
+        width:220px;
+        height:55px;
+        font-size:20px;
+
+    }
+
+    #message{
+
+        font-size:18px;
+
+    }
+
+}
+/* Hộp quà phát sáng */
+.glow{
+    animation: glow 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        filter: drop-shadow(0 0 5px gold);
+    }
+    to{
+        filter: drop-shadow(0 0 25px gold)
+                drop-shadow(0 0 40px #ffd700);
+    }
+}
+/* ================= CHUYỂN CẢNH LEVEL 8 ================= */
+
+#giftBox,
+#gift,
+#letter,
+#message {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Mèo xuất hiện */
+#gift.pop {
+    animation: giftAppear 0.8s ease forwards;
+}
+
+@keyframes giftAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(20px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.08) translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Lời chúc xuất hiện */
+#message.fadeIn {
+    animation: messageAppear 1s ease forwards;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#giftBox {
+    position: relative;
+    transition: transform .3s ease, filter .3s ease;
+    animation: giftGlow 2s ease-in-out infinite;
+}
+
+#giftBox:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px #ff66a3);
+}
+
+#giftBox::after {
+    content: "✨";
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    font-size: 35px;
+    animation: sparkle 1.2s ease-in-out infinite;
+}
+
+/* Hộp rung */
+#giftBox.shake {
+    animation: shake .12s linear infinite;
+}
+
+/* Hộp phát sáng */
+#giftBox.open {
+    filter: drop-shadow(0 0 35px #ff66a3)
+            drop-shadow(0 0 60px #ffd6e8);
+}
+
+/* Mèo xuất hiện */
+#gift {
+    animation: catPop .8s ease;
+}
+
+#catGift {
+    width: 210px;
+    max-width: 75%;
+    display: block;
+    margin: 10px auto 20px;
+    animation: catFloat 2.5s ease-in-out infinite;
+}
+
+/* Nút đọc thư có ánh sáng chạy qua */
+#letterBtn {
+    position: relative;
+    overflow: hidden;
+}
+
+#letterBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255,255,255,.35);
+    transform: skewX(-20deg);
+    animation: buttonShine 3s infinite;
+}
+
+/* Tim */
+.heart {
+    z-index: 9999;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes giftGlow {
+    0%,100% {
+        filter: drop-shadow(0 0 5px rgba(255,102,163,.2));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 18px rgba(255,102,163,.7));
+    }
+}
+
+@keyframes sparkle {
+    0%,100% {
+        opacity: .3;
+        transform: scale(.7) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3) rotate(20deg);
+    }
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-4deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes catPop {
+    0% {
+        opacity: 0;
+        transform: scale(.3) translateY(30px);
+    }
+
+    70% {
+        transform: scale(1.08) translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes catFloat {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes buttonShine {
+    0% {
+        left: -100%;
+    }
+
+    30%,100% {
+        left: 130%;
+    }
+}
+
+/* Điện thoại */
+@media(max-width:768px) {
+
+    #giftBox {
+        font-size: 90px;
+    }
+
+    #catGift {
+        width: 190px;
+    }
+
+}
+.birthday-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    white-space: nowrap;
+}
+
+.birthday-title span:first-child,
+.birthday-title span:last-child {
+    font-size: 0.75em;
+    flex-shrink: 0;
+}
+
+.birthday-title span:nth-child(2) {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+
+    .birthday-title {
+        gap: 6px;
+        font-size: 36px;
+    }
+
+    .birthday-title span:first-child,
+    .birthday-title span:last-child {
+        font-size: 0.65em;
+    }
+}
+#musicBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #ff4d94;
+
+    border: 2px solid #ff9fc4;
+    border-radius: 25px;
+
+    padding: 10px 16px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(255, 77, 148, 0.2);
+
+    transition: 0.3s;
+
+    z-index: 999;
+}
+
+#musicBtn:hover {
+    transform: scale(1.08);
+    background: #fff0f7;
+}
+
+
+/* ================= MÀN KẾT ================= */
+
+#endMessage {
+    display: none;
+
+    margin-top: 30px;
+
+    color: #ff4d94;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    line-height: 1.8;
+
+    animation: fadeIn 1s;
+}
+
+#endMessage button {
+    margin-top: 18px;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #ff66a3;
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#endMessage button:hover {
+    transform: scale(1.08);
+    background: #ff3d8a;
+}
+
+
+/* ================= HỘP QUÀ PHÁT SÁNG ================= */
+
+#giftBox.open {
+    animation: giftShake 0.8s ease;
+}
+
+#giftBox.open::after {
+    content: "✨";
+
+    position: absolute;
+
+    font-size: 70px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    animation: sparkle 0.8s ease forwards;
+
+    pointer-events: none;
+}
+
+@keyframes giftShake {
+
+    0%, 100% {
+        transform: rotate(0) scale(1);
+    }
+
+    20% {
+        transform: rotate(-8deg) scale(1.08);
+    }
+
+    40% {
+        transform: rotate(8deg) scale(1.12);
+    }
+
+    60% {
+        transform: rotate(-6deg) scale(1.1);
+    }
+
+    80% {
+        transform: rotate(6deg) scale(1.08);
+    }
+
+}
+
+@keyframes sparkle {
+
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+}
+
+
+/* ================= MÈO XUẤT HIỆN ================= */
+
+#gift.pop {
+    animation: giftPop 0.8s ease;
+}
+
+@keyframes giftPop {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    70% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    #musicBtn {
+        top: 10px;
+        right: 10px;
+
+        padding: 8px 12px;
+
+        font-size: 13px;
+    }
+
+    #endMessage {
+        font-size: 19px;
+    }
+
+}
